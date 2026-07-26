@@ -1,0 +1,401 @@
+<!DOCTYPE html><html dir="rtl" lang="ar"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>فنادقنا المختارة | قافلة المؤمنين</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&amp;family=IBM+Plex+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "outline-variant": "#c1c8c2",
+                "error": "#ba1a1a",
+                "tertiary-container": "#2b2b26",
+                "on-primary": "#ffffff",
+                "surface-bright": "#fcf8f9",
+                "surface-tint": "#3b6751",
+                "surface": "#fcf8f9",
+                "surface-container": "#f0edee",
+                "on-tertiary-fixed-variant": "#474741",
+                "on-background": "#1b1b1c",
+                "on-primary-container": "#6f9c84",
+                "primary-fixed-dim": "#a2d1b7",
+                "on-secondary-fixed-variant": "#574500",
+                "inverse-primary": "#a2d1b7",
+                "secondary": "#735c00",
+                "tertiary-fixed": "#e5e2db",
+                "surface-container-high": "#eae7e8",
+                "on-tertiary": "#ffffff",
+                "secondary-fixed": "#ffe088",
+                "on-error-container": "#93000a",
+                "primary-fixed": "#bdedd2",
+                "error-container": "#ffdad6",
+                "on-secondary": "#ffffff",
+                "surface-container-highest": "#e5e2e3",
+                "on-surface": "#1b1b1c",
+                "background": "#fcf8f9",
+                "on-tertiary-fixed": "#1c1c17",
+                "tertiary-fixed-dim": "#c9c6bf",
+                "secondary-container": "#fed65b",
+                "on-primary-fixed-variant": "#234f3b",
+                "inverse-surface": "#303031",
+                "secondary-fixed-dim": "#e9c349",
+                "on-surface-variant": "#414943",
+                "surface-dim": "#dcd9da",
+                "primary": "#001b0f",
+                "on-secondary-container": "#745c00",
+                "surface-variant": "#e5e2e3",
+                "tertiary": "#161712",
+                "inverse-on-surface": "#f3f0f1",
+                "on-error": "#ffffff",
+                "on-tertiary-container": "#93928b",
+                "primary-container": "#013220",
+                "surface-container-low": "#f6f3f4",
+                "on-primary-fixed": "#002113",
+                "on-secondary-fixed": "#241a00",
+                "outline": "#717973",
+                "surface-container-lowest": "#ffffff"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "margin-mobile": "20px",
+                "container-max": "1280px",
+                "unit": "8px",
+                "gutter": "24px",
+                "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                "body-md": ["IBM Plex Sans"],
+                "display-lg": ["Noto Serif"],
+                "label-sm": ["IBM Plex Sans"],
+                "display-lg-mobile": ["Noto Serif"],
+                "headline-md": ["Noto Serif"],
+                "body-lg": ["IBM Plex Sans"],
+                "headline-lg": ["Noto Serif"]
+            },
+            "fontSize": {
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fcf8f9;
+            color: #1b1b1c;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Islamic Pattern Overlay */
+        .islamic-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l2.5 12.5L45 15l-12.5 2.5L30 30l-2.5-12.5L15 15l12.5-2.5L30 0z' fill='%23013220' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .luxury-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md islamic-pattern">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 backdrop-blur-md border-outline-variant/30 shadow-sm h-20 bg-transparent">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-full">
+<div class="flex items-center gap-4">
+<img alt="Qafilat Al-Mu'minin Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLsPaam7Q7YiHD1H8oskGlw4cFxAV2lN72bbn8tgNMoMr6nfOBsqVu7gFUm2HzHYwiUyHsVXtpMqU16GvBX32WSol0yMIrhUVeDjZvfdj4ldMGRe4okIjklovrEwUdBvdwzG0m-E45FwKNCbTUE1AoK8cyqvtkRvBoT0DdYB1xnf-f0plk0Irg6qEtLicYMnanjwFcnVFj3HLeHFCNyzQBXxXleJhsv7CT-BzPONKMok5CvneL7YHFoUEBiJ">
+<span class="font-headline-md text-headline-md font-bold text-on-primary">قافلة المؤمنين</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="hover:text-primary transition-colors font-label-sm text-label-sm text-on-primary" href="#">الرئيسية</a>
+<a class="hover:text-primary transition-colors font-label-sm text-label-sm text-on-primary" href="#">الحافلات</a>
+<a class="font-bold relative after:content-[''] after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-secondary after:rounded-full font-label-sm text-label-sm text-on-primary" href="#">الفنادق</a>
+<a class="hover:text-primary transition-colors font-label-sm text-label-sm text-on-primary" href="#">اتصل بنا</a>
+</nav>
+<button class="bg-primary-container text-on-primary py-2 px-6 rounded-lg font-label-sm text-label-sm hover:luxury-gradient transition-all active:scale-95">
+                احجز الآن
+            </button>
+</div>
+</header>
+<main class="pt-32 pb-24">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-16 text-center">
+<h1 class="font-display-lg text-display-lg text-primary mb-4">فنادقنا المختارة</h1>
+<p class="text-on-surface-variant max-w-2xl mx-auto font-body-lg text-body-lg">
+                نختار لك أرقى الفنادق القريبة من الحرم المكي والمسجد النبوي لضمان راحتك وسكينة عبادتك.
+            </p>
+</section>
+<!-- Filters Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-12">
+<div class="flex justify-center items-center gap-4 flex-wrap">
+<button class="px-8 py-3 rounded-full border-2 border-primary bg-primary text-on-primary font-label-sm text-label-sm transition-all">الكل</button>
+<button class="px-8 py-3 rounded-full border-2 border-outline-variant text-on-surface-variant hover:border-secondary hover:text-secondary font-label-sm text-label-sm transition-all">5 نجوم</button>
+<button class="px-8 py-3 rounded-full border-2 border-outline-variant text-on-surface-variant hover:border-secondary hover:text-secondary font-label-sm text-label-sm transition-all">4 نجوم</button>
+<button class="px-8 py-3 rounded-full border-2 border-outline-variant text-on-surface-variant hover:border-secondary hover:text-secondary font-label-sm text-label-sm transition-all">3 نجوم</button>
+</div>
+</section>
+<!-- Hotels Bento/Grid -->
+<section class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Hotel Card 1 (Premium Feature) -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm group hover:shadow-md transition-all">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A luxurious view of a high-end 5-star hotel interior in Mecca, featuring gold-trimmed Islamic architectural details, marble floors reflecting soft ambient lighting, and elegant velvet furniture. Through a large floor-to-ceiling window, the majestic Kaaba and the Great Mosque of Mecca are visible at dusk, bathed in a serene golden glow. The atmosphere is one of profound tranquility and luxury, consistent with a premium Umrah experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9qytAlm9XeYfJv_aJp52Gkn4LGnByZq5yyHCxqwuPTfOxXdeXd8sridN-AtCla-G7xvU-p0ePSGmmy_2rfHpisW9CD69xPpfvmBOZtbwTrf_v6K8yJeYnCKAN-Tv76K1lcazK-s_7wrWuhUqN8kOCk0nG6iiA0nsUjBsVlbkbZtGgzqTgJvJbmInSdcLYS9PvF7KUgRQeRxhFUZs5YJiUZyXkeF0CzkPJCBFSyXNjsKkRvuK09PuoMFaUfRskNlnYYFUiNkN6DzuY">
+<div class="absolute top-4 right-4 bg-primary/80 backdrop-blur-sm text-on-primary px-3 py-1 rounded-full text-label-sm font-label-sm">5 نجوم</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">فندق فيرمونت برج الساعة</h3>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant mb-6">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="text-label-sm">50 متر من ساحة الحرم</span>
+</div>
+<div class="border-t border-secondary/10 pt-4 flex justify-between items-center">
+<div>
+<span class="text-label-sm text-on-surface-variant block">تبدأ من</span>
+<span class="font-headline-md text-primary">1,200 ريال <small class="text-label-sm">/ ليلة</small></span>
+</div>
+<button class="bg-primary text-on-primary py-2 px-6 rounded-lg font-label-sm text-label-sm hover:luxury-gradient transition-all">احجز الآن</button>
+</div>
+</div>
+</div>
+<!-- Hotel Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm group hover:shadow-md transition-all">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A sophisticated lobby of a 4-star hotel in Medina, showcasing modern minimalist Islamic design. The space is filled with soft natural light filtering through decorative wooden screens (mashrabiya), casting intricate geometric shadows on the cream-colored parchment walls. Elegant seating areas with olive green upholstery offer a sense of calm (Sakinah). The overall aesthetic is clean, professional, and spiritual." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH8J9Ld0vAjsKECSXCFL5-mQBC6OnHuveZCFI5gepf8CnFah58z_1-M6XETurvxdLxbZcekhIt0aQ7o_SJ9UyYCCQ9jOBmYzWSa6FReC2hgVfWvR5xdaXiATymeyTFS5O-7LMK3p8kyEQSy9nXI_nKp5rck9P2_3FizQWk5RKufd9HaZcPalsP8mHz7y57VbcQRIgMkbiPPTQtyR3x85rj7AhkmAHbqtTIY2XwsQ5ki92BX37EO-3hZgTiHu-ZqNN7NCO6jyqGV3oV">
+<div class="absolute top-4 right-4 bg-primary/80 backdrop-blur-sm text-on-primary px-3 py-1 rounded-full text-label-sm font-label-sm">4 نجوم</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">فندق أنوار المدينة موفنبيك</h3>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-outline-variant">star</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant mb-6">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="text-label-sm">200 متر من المسجد النبوي</span>
+</div>
+<div class="border-t border-secondary/10 pt-4 flex justify-between items-center">
+<div>
+<span class="text-label-sm text-on-surface-variant block">تبدأ من</span>
+<span class="font-headline-md text-primary">850 ريال <small class="text-label-sm">/ ليلة</small></span>
+</div>
+<button class="bg-primary text-on-primary py-2 px-6 rounded-lg font-label-sm text-label-sm hover:luxury-gradient transition-all">احجز الآن</button>
+</div>
+</div>
+</div>
+<!-- Hotel Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm group hover:shadow-md transition-all">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A bright and airy standard twin room in a high-quality 3-star hotel in Mecca. The room is decorated in a palette of warm whites and soft greys with subtle gold accents in the lighting fixtures. The furniture is minimalist but comfortable, featuring clean lines and premium textures. Large windows let in plenty of daylight, creating a cheerful and refreshing atmosphere for pilgrims. The design reflects excellence (Ihsan) through meticulous organization and cleanliness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa-R0eoAUNmmzX3Fz5qbBLwHDY8P2C2zCyNiFcfwZLVRSdsYWbIUmr9YGedlqMntIxjW6qN0k3q1FEeA7wPse9ZiRKccUm2ZhTC263q3C3sUoPJl2NABT0_CQyjPvoqP91JDPoIE0Q9PMuqGiRhEM2dxqxepRnHyelvvgir68n73BQesR0sa-2LJyjaCWkGk9yXS0de2rVn1mO-aTSTF6MgomNMDepk10R0Grm3ys6DjMFtqJR6PSkjRaupRKmOoa21wAlowTEMPP5">
+<div class="absolute top-4 right-4 bg-primary/80 backdrop-blur-sm text-on-primary px-3 py-1 rounded-full text-label-sm font-label-sm">3 نجوم</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">فندق إيلاف بكة</h3>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-outline-variant">star</span>
+<span class="material-symbols-outlined text-outline-variant">star</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant mb-6">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="text-label-sm">600 متر (خدمة توصيل متوفرة)</span>
+</div>
+<div class="border-t border-secondary/10 pt-4 flex justify-between items-center">
+<div>
+<span class="text-label-sm text-on-surface-variant block">تبدأ من</span>
+<span class="font-headline-md text-primary">450 ريال <small class="text-label-sm">/ ليلة</small></span>
+</div>
+<button class="bg-primary text-on-primary py-2 px-6 rounded-lg font-label-sm text-label-sm hover:luxury-gradient transition-all">احجز الآن</button>
+</div>
+</div>
+</div>
+<!-- Hotel Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm group hover:shadow-md transition-all">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An elegant restaurant space within a luxury hotel in Medina. The interior features a sophisticated blend of dark wood paneling and parchment-colored marble. Tables are set with fine white linens and silver cutlery, under the glow of modern chandeliers that mimic the shape of traditional lanterns. A large panoramic window provides a magnificent view of the Green Dome of the Prophet's Mosque, emphasizing the spiritual proximity of the location." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxSrswyCtkbFjpsVKTMGCsBxxmKyNtVd6ZW0bZ0xi7Qti4hvs98SczjEjsb-ZMsQsLqyS1MKnSNniR9SeyCmuNpjab-Fz8SCB_8FAQJs-jqralYRRtbgR3j_JjX4I_IKtbqrGIzIuSufwMGyXZj3JMMnwQyEEGr3466QihKCJE_uhD3drl3631bqzOea62yN_DRTRa1pK2PpQ_jy-xrq7F8TlYPhTq4XpzlOCPHCHwQcLHcVDIwRwdbxrhE4Ml6G5j1ZXiayGaRhce">
+<div class="absolute top-4 right-4 bg-primary/80 backdrop-blur-sm text-on-primary px-3 py-1 rounded-full text-label-sm font-label-sm">5 نجوم</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">فندق شذا المدينة</h3>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant mb-6">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="text-label-sm">مواجه للحرم النبوي مباشرة</span>
+</div>
+<div class="border-t border-secondary/10 pt-4 flex justify-between items-center">
+<div>
+<span class="text-label-sm text-on-surface-variant block">تبدأ من</span>
+<span class="font-headline-md text-primary">1,100 ريال <small class="text-label-sm">/ ليلة</small></span>
+</div>
+<button class="bg-primary text-on-primary py-2 px-6 rounded-lg font-label-sm text-label-sm hover:luxury-gradient transition-all">احجز الآن</button>
+</div>
+</div>
+</div>
+<!-- Hotel Card 5 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm group hover:shadow-md transition-all">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A clean, modern exterior view of a boutique hotel in Mecca. The building features contemporary Islamic architecture with arched windows and a façade made of light desert stone. The entrance is illuminated with soft uplighting, highlighting its elegant 4-star status. The surrounding environment is orderly and peaceful, reflecting the 'Sakinah' and excellence central to the brand. The lighting is early morning, clear and bright." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIVYTZjQXbWMRJ-5VEgAJkgfAuosaE8Uygo2zDn0A9CM6YlX6JgxX-RiDswk31IQkzVURuKyhNzQlRzsHZt9pC3opApKZY_KYMO7e3z5ibwuOG2EyAum80gQnaudGOzajZXNLE0psczHhA9_LmTPf5uPvWfAMu-tkRVOPyxjiaugmDcIyjnK5bqOFJPebaMqyUAx43u0s4AqsKU_Pd4o8Ujm62O_XeDlqwgqzsFulRcLImWj93JzWnjLw9WXP1_3doed77KSwhYBKg">
+<div class="absolute top-4 right-4 bg-primary/80 backdrop-blur-sm text-on-primary px-3 py-1 rounded-full text-label-sm font-label-sm">4 نجوم</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">فندق قصر مكة رافلز</h3>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-outline-variant">star</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant mb-6">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="text-label-sm">أمتار قليلة من باب الملك فهد</span>
+</div>
+<div class="border-t border-secondary/10 pt-4 flex justify-between items-center">
+<div>
+<span class="text-label-sm text-on-surface-variant block">تبدأ من</span>
+<span class="font-headline-md text-primary">980 ريال <small class="text-label-sm">/ ليلة</small></span>
+</div>
+<button class="bg-primary text-on-primary py-2 px-6 rounded-lg font-label-sm text-label-sm hover:luxury-gradient transition-all">احجز الآن</button>
+</div>
+</div>
+</div>
+<!-- Hotel Card 6 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm group hover:shadow-md transition-all">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A cozy and well-lit triple room in a budget-friendly but excellent 3-star hotel. The decor is functional yet warm, using light wood furniture and cream-colored linens. Small touches of green in the curtains and bed runners connect the space to the primary brand color. The room is impeccably clean, providing a restful sanctuary for pilgrims. The lighting is warm and welcoming, creating a sense of home away from home." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB33fYX1HXIYxSHjGjRkqdLKbrILmDiXext6WOUpJILceuZBKHzecBBgbLeHrvFOxgO10DTSOVCyOAie02oViwyEY243A-uEd3AhqewePKDWUasQ4AJTebP7fEF9bn9v6Xa9lsJkQvgPIvtvfZLLy0JoQh0mws-g2-qWtZP1pb8TSUwXZCE2iQLXOj6QsbJ4hqDCAeTCdxU6ltSyWh33lTevwAHfdJqBDDLXCyHfMiVj4sNfbZ-6tzf7MZT4BtGeoNb2gp1JR9e4SW5">
+<div class="absolute top-4 right-4 bg-primary/80 backdrop-blur-sm text-on-primary px-3 py-1 rounded-full text-label-sm font-label-sm">3 نجوم</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">فندق مريديان مكة</h3>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-outline-variant">star</span>
+<span class="material-symbols-outlined text-outline-variant">star</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant mb-6">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="text-label-sm">800 متر مع نقل ترددي</span>
+</div>
+<div class="border-t border-secondary/10 pt-4 flex justify-between items-center">
+<div>
+<span class="text-label-sm text-on-surface-variant block">تبدأ من</span>
+<span class="font-headline-md text-primary">390 ريال <small class="text-label-sm">/ ليلة</small></span>
+</div>
+<button class="bg-primary text-on-primary py-2 px-6 rounded-lg font-label-sm text-label-sm hover:luxury-gradient transition-all">احجز الآن</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary pt-16 pb-8 border-t border-secondary/20">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter text-on-primary">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<img alt="Logo" class="h-10 w-auto brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6YuY8_HBvB-vz1vGToLr0fD33rhYLSbYdcmQaK83TePe8liJhBoLHul5udqwCyBnmdW9rC7JCusBCztHcZEjaQiYNu5c0jq6GXxXUbPnMMi8iDQ0DzRQ0bEWmTbwzkKEJbTlzl7s19Mv9LyOprC-9jpUbNs50pdV6WqtPkeQriZnaiDCNuIuVeGoEgqayXfAhgppZ6W4A5Q638NVNHOfOBAm8lozZY1apF5c38AHK7Lf6gmwzMVonqppS6Vuy5Ajwd8myB_NNlZ6A">
+<span class="font-headline-md text-headline-md text-on-primary">قافلة المؤمنين</span>
+</div>
+<p class="text-on-primary/70 font-body-md text-body-md">
+                    نسعى لتقديم تجربة روحانية فريدة من خلال خدماتنا المتميزة في تنظيم رحلات العمرة.
+                </p>
+</div>
+<div class="col-span-1">
+<h4 class="font-headline-md text-headline-md mb-6">روابط سريعة</h4>
+<ul class="space-y-3">
+<li class=""><a class="text-on-primary/80 hover:text-secondary-container transition-colors font-label-sm text-label-sm" href="#">الرئيسية</a></li>
+<li class=""><a class="text-on-primary/80 hover:text-secondary-container transition-colors font-label-sm text-label-sm" href="#">الحافلات</a></li>
+<li class=""><a class="text-secondary-container font-label-sm text-label-sm" href="#">الفنادق</a></li>
+<li class=""><a class="text-on-primary/80 hover:text-secondary-container transition-colors font-label-sm text-label-sm" href="#">اتصل بنا</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-headline-md text-headline-md mb-6">سياسات</h4>
+<ul class="space-y-3">
+<li class=""><a class="text-on-primary/80 hover:text-secondary-container transition-colors font-label-sm text-label-sm" href="#">سياسة الخصوصية</a></li>
+<li class=""><a class="text-on-primary/80 hover:text-secondary-container transition-colors font-label-sm text-label-sm" href="#">الشروط والأحكام</a></li>
+<li class=""><a class="text-on-primary/80 hover:text-secondary-container transition-colors font-label-sm text-label-sm" href="#">إلغاء الحجز</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-headline-md text-headline-md mb-6">تواصل معنا</h4>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container">call</span>
+<span class="text-label-sm">+966 000 000 000</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container">mail</span>
+<span class="text-label-sm">info@qafilat.com</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container">location_on</span>
+<span class="text-label-sm">مكة المكرمة، المملكة العربية السعودية</span>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-on-primary/10 text-center">
+<p class="text-on-primary/60 font-label-sm text-label-sm">© 2024 قافلة المؤمنين. جميع الحقوق محفوظة.</p>
+</div>
+</footer>
+<script>
+        // Micro-interactions
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('mousedown', () => btn.classList.add('scale-95'));
+            btn.addEventListener('mouseup', () => btn.classList.remove('scale-95'));
+            btn.addEventListener('mouseleave', () => btn.classList.remove('scale-95'));
+        });
+
+        // Simple filtering simulation
+        const filterButtons = document.querySelectorAll('.flex.justify-center.items-center.gap-4 button');
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => {
+                    b.classList.remove('bg-primary', 'text-on-primary');
+                    b.classList.add('border-outline-variant', 'text-on-surface-variant');
+                });
+                btn.classList.remove('border-outline-variant', 'text-on-surface-variant');
+                btn.classList.add('bg-primary', 'text-on-primary', 'border-primary');
+            });
+        });
+    </script>
+
+
+</body></html>

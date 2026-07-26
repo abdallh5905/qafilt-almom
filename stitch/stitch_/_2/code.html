@@ -1,0 +1,607 @@
+<!DOCTYPE html><html dir="rtl" lang="ar"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>قافلة المؤمنين | رحلات العمرة الفاخرة</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&amp;family=Noto+Serif+Arabic:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        :root {
+            --primary: #001b0f;
+            --primary-container: #013220;
+            --gold: #D4AF37;
+            --gold-dark: #B8860B;
+        }
+        body {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            background-color: #fcf8f9;
+            color: #1b1b1c;
+            scroll-behavior: smooth;
+        }
+        .font-headline-md { font-family: 'Noto Serif Arabic', serif; }
+        .font-display-lg { font-family: 'Noto Serif Arabic', serif; }
+        
+        .gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+        }
+        .islamic-pattern {
+            background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
+            opacity: 0.03;
+        }
+        .shadow-soft {
+            box-shadow: 0px 4px 20px rgba(1, 50, 32, 0.05);
+        }
+        .package-card:hover .card-image {
+            transform: scale(1.05);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 200px;
+        }
+        .accordion-item.active .icon-rot {
+            transform: rotate(180deg);
+        }
+        .glass-header {
+            background: rgba(252, 248, 249, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline-variant": "#c1c8c2",
+                      "error": "#ba1a1a",
+                      "tertiary-container": "#2b2b26",
+                      "on-primary": "#ffffff",
+                      "surface-bright": "#fcf8f9",
+                      "surface-tint": "#3b6751",
+                      "surface": "#fcf8f9",
+                      "surface-container": "#f0edee",
+                      "on-tertiary-fixed-variant": "#474741",
+                      "on-background": "#1b1b1c",
+                      "on-primary-container": "#6f9c84",
+                      "primary-fixed-dim": "#a2d1b7",
+                      "on-secondary-fixed-variant": "#574500",
+                      "inverse-primary": "#a2d1b7",
+                      "secondary": "#735c00",
+                      "tertiary-fixed": "#e5e2db",
+                      "surface-container-high": "#eae7e8",
+                      "on-tertiary": "#ffffff",
+                      "secondary-fixed": "#ffe088",
+                      "on-error-container": "#93000a",
+                      "primary-fixed": "#bdedd2",
+                      "error-container": "#ffdad6",
+                      "on-secondary": "#ffffff",
+                      "surface-container-highest": "#e5e2e3",
+                      "on-surface": "#1b1b1c",
+                      "background": "#fcf8f9",
+                      "on-tertiary-fixed": "#1c1c17",
+                      "tertiary-fixed-dim": "#c9c6bf",
+                      "secondary-container": "#fed65b",
+                      "on-primary-fixed-variant": "#234f3b",
+                      "inverse-surface": "#303031",
+                      "secondary-fixed-dim": "#e9c349",
+                      "on-surface-variant": "#414943",
+                      "surface-dim": "#dcd9da",
+                      "primary": "#001b0f",
+                      "on-secondary-container": "#745c00",
+                      "surface-variant": "#e5e2e3",
+                      "tertiary": "#161712",
+                      "inverse-on-surface": "#f3f0f1",
+                      "on-error": "#ffffff",
+                      "on-tertiary-container": "#93928b",
+                      "primary-container": "#013220",
+                      "surface-container-low": "#f6f3f4",
+                      "on-primary-fixed": "#002113",
+                      "on-secondary-fixed": "#241a00",
+                      "outline": "#717973",
+                      "surface-container-lowest": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.5rem",
+                      "lg": "0.75rem",
+                      "xl": "1rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "container-max": "1200px",
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "margin-desktop": "40px"
+              },
+              "fontFamily": {
+                      "body-md": ["IBM Plex Sans Arabic"],
+                      "display-lg": ["Noto Serif Arabic"],
+                      "label-sm": ["IBM Plex Sans Arabic"],
+                      "display-lg-mobile": ["Noto Serif Arabic"],
+                      "headline-md": ["Noto Serif Arabic"],
+                      "body-lg": ["IBM Plex Sans Arabic"],
+                      "headline-lg": ["Noto Serif Arabic"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "label-sm": ["13px", {"lineHeight": "1", "letterSpacing": "0.03em", "fontWeight": "600"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "headline-md": ["28px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "body-lg": ["20px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg": ["36px", {"lineHeight": "1.3", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- Top Navigation App Bar -->
+<header class="fixed top-0 w-full z-50 border-outline-variant/20 transition-all duration-300 h-24 bg-transparent" id="main-header">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-full">
+<div class="flex items-center gap-3 md:gap-5">
+<div class="relative group">
+<div class="absolute -inset-1 bg-secondary/20 rounded-full blur opacity-0 group-hover:opacity-100 transition duration-500"></div>
+<img alt="قافلة المؤمنين" class="relative h-14 md:h-16 w-auto object-contain rounded-lg shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8ZLay52sBYHnAH4e4xG8gwKfNkrsiYZ3YOzneRkiwAuVnPEvojOy92Yy9fai-T2vwYbLpNwifPJ43L3-V6XlzXitH0yNB_YSUGBAyBoD4uTHF69KusYIs4w3IIFr6ZSXiqMkcFcivJinT1h1kR2-CuMA-Ueq5RsGbsjAMM4c4xyIk23aeNDw9XVBzz1a9rLjSXWCcdjcLUNUmM9U0NdmDNQkVYrnx-0J3r5uHLmBPre-_j-GoLeaTsMVgyHA5qixbZ8qkBtgMKVJ3">
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-xl md:text-2xl font-bold text-primary tracking-tight"><span class="font-headline-md text-xl md:text-2xl font-bold text-white tracking-tight">قافلة المؤمنين</span></span>
+<span class="text-[10px] md:text-xs text-secondary font-bold tracking-widest uppercase opacity-80">QAFILAT AL-MU'MININ</span>
+</div>
+</div>
+<nav class="hidden lg:flex gap-10 items-center">
+<a class="font-bold relative group font-label-sm text-label-sm text-white" href="#">
+                الرئيسية
+                <span class="absolute -bottom-2 right-0 w-full h-0.5 bg-secondary scale-x-100 transition-transform origin-right"></span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 relative group font-label-sm text-label-sm text-white" href="#packages">
+                باقات العمرة
+                <span class="absolute -bottom-2 right-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300 origin-right"></span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 relative group font-label-sm text-label-sm text-white" href="#buses">
+                أسطولنا
+                <span class="absolute -bottom-2 right-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300 origin-right"></span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 relative group font-label-sm text-label-sm text-white" href="#hotels">
+                فنادقنا
+                <span class="absolute -bottom-2 right-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300 origin-right"></span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 relative group font-label-sm text-label-sm text-white" href="#faq">
+                الأسئلة الشائعة
+                <span class="absolute -bottom-2 right-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300 origin-right"></span>
+</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden md:block gold-gradient text-white px-8 py-3 rounded-lg font-label-sm text-label-sm hover:shadow-lg hover:-translate-y-0.5 active:scale-95 transition-all duration-300 shadow-soft">
+                احجز رحلتك
+            </button>
+<button class="lg:hidden text-white p-2"><span class="material-symbols-outlined text-3xl">menu</span></button>
+</div>
+</div>
+</header>
+<main class="pt-0">
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 overflow-hidden bg-primary">
+<!-- Background Layer -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary z-10"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-transparent to-transparent z-10 hidden lg:block"></div>
+<div class="w-full h-full bg-cover bg-center scale-105 animate-[subtle-zoom_20s_infinite_alternate]" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAX84HU8qT9gmJi0cOeqZ5Ut1A1aCGPjpNWGUSCQ89iwLnT59HC4dTepq67dzGSwz4quiAFnl7zsPsH_2vrCnH-8mTvz0CVxHqmkKBaGSsstdU62iFuvCJ2OTpZ6Yo3g9WsPxTE0U9vZBbOW5Q0dlocjDAx_EC0IcByuFn4Ifo83JgOVRbzZysVvULTIkEBocdf0znxw2wymeNzBjzt5gtuk5CXw-YpjpcfPULGE7avViA6Sz0uRtwsvZ9Qn7jj-e8UaxtCjSi2aZWG')"></div>
+</div>
+<style>
+            @keyframes subtle-zoom {
+                from { transform: scale(1); }
+                to { transform: scale(1.1); }
+            }
+        </style>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-20 w-full py-20">
+<div class="max-w-3xl text-white">
+<div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/30 backdrop-blur-md mb-8 animate-fade-in">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-secondary-fixed font-label-sm text-xs tracking-widest uppercase">خدمات معتمدة وموثوقة</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8 leading-[1.1] animate-slide-up">
+                    رحلتك للعمرة تبدأ مع <br>
+<span class="text-transparent bg-clip-text gold-gradient">قافلة المؤمنين</span>
+</h1>
+<p class="font-body-lg text-lg md:text-xl mb-12 opacity-80 leading-relaxed max-w-2xl animate-slide-up [animation-delay:200ms]">
+                    نحن نعتني بكل تفاصيل رحلتك الإيمانية، لنمنحك السكينة والطمأنينة التي تستحقها في أقدس بقاع الأرض. باقات متكاملة، فنادق مختارة، وخدمة استثنائية.
+                </p>
+<div class="flex flex-wrap gap-5 animate-slide-up [animation-delay:400ms]">
+<button class="gold-gradient text-primary px-10 py-5 rounded-xl font-headline-md text-lg font-bold shadow-[0_10px_30px_rgba(212,175,55,0.3)] hover:shadow-[0_15px_40px_rgba(212,175,55,0.4)] hover:-translate-y-1 transition-all duration-300">
+                        احجز باقتك الآن
+                    </button>
+<button class="bg-white/5 backdrop-blur-xl border border-white/20 text-white px-10 py-5 rounded-xl font-headline-md text-lg flex items-center gap-3 hover:bg-white/10 hover:border-white/40 transition-all duration-300 group">
+<span class="material-symbols-outlined text-secondary group-hover:scale-110 transition-transform">chat</span>
+                        تواصل معنا واتساب
+                    </button>
+</div>
+<div class="mt-16 flex items-center gap-10 opacity-60 animate-fade-in [animation-delay:600ms]">
+<div class="flex flex-col">
+<span class="text-2xl font-bold font-headline-md">+10k</span>
+<span class="text-xs">معتمر سعيد</span>
+</div>
+<div class="w-px h-10 bg-white/20"></div>
+<div class="flex flex-col">
+<span class="text-2xl font-bold font-headline-md">15</span>
+<span class="text-xs">عاماً من الخبرة</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative element -->
+<div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent z-20"></div>
+</section>
+<style>
+        @keyframes slide-up {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-slide-up { animation: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .animate-fade-in { animation: fade-in 1s ease forwards; }
+    </style>
+<!-- Packages Section -->
+<section class="py-24 relative overflow-hidden" id="packages">
+<div class="absolute inset-0 islamic-pattern"></div>
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-display-lg text-primary mb-4">باقات العمرة</h2>
+<div class="w-24 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Economic Card -->
+<div class="package-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-soft border border-outline-variant/20 transition-all hover:shadow-xl group">
+<div class="h-64 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 card-image" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6nWd3dQxM96eFzIs2DD5r5idjuo6XCbyl5y_ED_9yYjeO6vGXOh4w2_PFvDFbiYy_nXPUMHCie6SuwhsNTxZk__umg3h8NYSPogSMI0W1GI9D6rbe9xOZud0LG0cugz_9Hl9ZU0lvNATuTr0yL7HvPn2cfun0Cf8rJturFyMZlydowt4ernpoE9rLYwKHRRrrZhq_JY_Ku5ssyoky6aOcGN4y6Vc-7da_TG-D4AVVivXBkelm50GRjX4jjA2fvgUjYxCJTU1GQizt')"></div>
+<span class="absolute top-4 right-4 bg-primary/80 text-white px-4 py-1 rounded-full font-label-sm text-label-sm backdrop-blur-sm">اقتصادي</span>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">الباقة الاقتصادية</h3>
+<div class="flex items-baseline gap-2 mb-4">
+<span class="text-3xl font-bold text-secondary">450</span>
+<span class="text-on-surface-variant font-label-sm">ريال سعودي</span>
+</div>
+<div class="w-full h-px bg-secondary/20 mb-6"></div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px]">hotel</span>
+<span class="font-body-md text-body-md">فندق 3 نجوم (600م عن الحرم)</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px]">directions_bus</span>
+<span class="font-body-md text-body-md">نقل حديث ومكيف</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px]">schedule</span>
+<span class="font-body-md text-body-md">مدة الرحلة: 3 أيام</span>
+</li>
+</ul>
+<button class="w-full border-2 border-secondary text-secondary py-3 rounded-lg font-bold hover:bg-secondary hover:text-white transition-all">احجز الآن</button>
+</div>
+</div>
+<!-- Premium Card -->
+<div class="package-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-xl border-2 border-secondary relative transform md:-translate-y-4 group">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 gold-gradient text-white px-6 py-1 rounded-full text-xs font-bold z-20">الأكثر طلباً</div>
+<div class="h-64 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 card-image" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDPKD1aNpA2r9EORPHL0hpF2LwfBt2ZBd_JruhB3AEyK44-EsEn5eOrjsHvoMPtIv3pw8GZ0F_LJDry_YyGFsWNzXVSgTsU5bnbIE9X8uUpHsO9GhCijJocnAbFk03vu-IxYmwWsoxZDXfnIQRm3zo-TmWOSb21T5qfQrtdK41pb91PyKLuecTzCEhyBeBoPxyZdF6IdGRDfspp2AKWFiNZLgtf6w6JVTprnq_iQ47LQzisePWVcHk13vi8A11i8dYN7EGxYlCrLVeQ')"></div>
+<span class="absolute top-4 right-4 bg-secondary text-white px-4 py-1 rounded-full font-label-sm text-label-sm shadow-md">مميز</span>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">الباقة المميزة</h3>
+<div class="flex items-baseline gap-2 mb-4">
+<span class="text-3xl font-bold text-secondary">750</span>
+<span class="text-on-surface-variant font-label-sm">ريال سعودي</span>
+</div>
+<div class="w-full h-px bg-secondary/20 mb-6"></div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px]">hotel</span>
+<span class="font-body-md text-body-md">فندق 4 نجوم (400م عن الحرم)</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px]">restaurant</span>
+<span class="font-body-md text-body-md">وجبة إفطار يومية</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px]">schedule</span>
+<span class="font-body-md text-body-md">مدة الرحلة: 4 أيام</span>
+</li>
+</ul>
+<button class="w-full gold-gradient text-white py-3 rounded-lg font-bold hover:shadow-lg transition-all">احجز الآن</button>
+</div>
+</div>
+<!-- VIP Card -->
+<div class="package-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-soft border border-outline-variant/20 transition-all hover:shadow-xl group">
+<div class="h-64 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 card-image" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCRawUhQsSISl47qTUWJ0Nw3gN09PY4ddjIKwkorMwWJ3iEvCMc3uHkKft91iKh-HQ_VbxtSHsdOedS6dIUd8MQGtq0a0aauvZfgKgZy0JL4HX499fbCEEIOUtAq1Qws2F834J12GnctLdwXIksk7LU-aCmcyQtZsy1JGgZ327ARi4tOJsbz8ugiEOJxtKVRcYrsVZyQSQJrSGUnpALRa0iJyQbZpB2Y2GVZb4ZhPHqY6qk9zafZpr9irmH5amaitRakmIcayF2SYeo')"></div>
+<span class="absolute top-4 right-4 bg-tertiary text-white px-4 py-1 rounded-full font-label-sm text-label-sm">VIP</span>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">باقة كبار الشخصيات</h3>
+<div class="flex items-baseline gap-2 mb-4">
+<span class="text-3xl font-bold text-secondary">1200</span>
+<span class="text-on-surface-variant font-label-sm">ريال سعودي</span>
+</div>
+<div class="w-full h-px bg-secondary/20 mb-6"></div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px]">hotel</span>
+<span class="font-body-md text-body-md">فندق 5 نجوم (أبراج البيت)</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px]">airport_shuttle</span>
+<span class="font-body-md text-body-md">نقل خاص بسيارات فاخرة</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px]">schedule</span>
+<span class="font-body-md text-body-md">مدة الرحلة: 5 أيام</span>
+</li>
+</ul>
+<button class="w-full border-2 border-secondary text-secondary py-3 rounded-lg font-bold hover:bg-secondary hover:text-white transition-all">احجز الآن</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Buses Section -->
+<section class="py-24 bg-primary text-white overflow-hidden" id="buses">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2">
+<div class="relative">
+<div class="absolute -inset-4 border border-secondary/30 rounded-2xl"></div>
+<div class="w-full h-96 rounded-xl bg-cover bg-center shadow-2xl relative z-10" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDpdigKgDqk1K32jMc1Eis-m2hq6h-x4PX1teT0ywxS-Gl045ozaz7GqEflVApg6QBTGnbvy7ab1aDYJQzxjMi56xgefbTxgZ3wij0c_RPQvbTPkNb_HwPLZHR7roYwm7WY8H3xpsqJ6UvUCbMD43bg2YJUBBoc8A53l5wHC-WgKpdHjry-l3buoDOjmCDW9zg5Oh2XeEJkvYyNMyshWeDbL80GuJ7bI8KoIvtF4XPAyGx8KJ-OWoDjchaQqRulkB0DXJBoeInmwh_G')"></div>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<h2 class="font-display-lg text-display-lg mb-6">أسطولنا الحديث</h2>
+<p class="font-body-lg text-body-lg mb-8 opacity-80 leading-relaxed">
+                        نفتخر بتقديم تجربة سفر مريحة وآمنة لضيوف الرحمن من خلال أسطول من الباصات الحديثة المجهزة بأعلى معايير الراحة.
+                    </p>
+<div class="grid grid-cols-2 gap-6 mb-10">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-[32px]">ac_unit</span>
+<span class="font-body-md">تكييف مركزي متطور</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-[32px]">airline_seat_recline_extra</span>
+<span class="font-body-md">مقاعد مريحة وواسعة</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-[32px]">event_available</span>
+<span class="font-body-md">رحلات يومية منتظمة</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-[32px]">verified_user</span>
+<span class="font-body-md">سائقين محترفين</span>
+</div>
+</div>
+<button class="bg-secondary text-white px-10 py-4 rounded-xl font-bold hover:bg-secondary/80 transition-all">عرض كل الباصات</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Hotels Section -->
+<section class="py-24" id="hotels">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-display-lg text-display-lg text-primary mb-2">فنادقنا المختارة</h2>
+<p class="text-on-surface-variant font-body-md">إقامة فاخرة بجوار الحرم المكي الشريف</p>
+</div>
+<button class="text-secondary font-bold flex items-center gap-2 hover:gap-4 transition-all">
+                    عرض كل الفنادق
+                    <span class="material-symbols-outlined">arrow_back</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Hotel Card 1 -->
+<div class="flex flex-col md:flex-row bg-white rounded-2xl overflow-hidden shadow-soft border border-outline-variant/10 group">
+<div class="md:w-1/2 overflow-hidden h-64 md:h-auto">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDap8Zn20Ty-6Of43TZvHgTovtiqNC1Srun1K4XayByp5UyW0Qw1SKttPhama1IwwMbicpUiiZCvQq1VRSXR3GLpsFzVFXWUf-n5jmYPFFppQ3NN7yAHCFmGsgq9sUkwgHYVz3asH6afrnxWeCoFwe0CEz0pp8-Rb81CEa0Of3QHzAOC_54Ze9HLiRkksnD_f_5A1YQ4zvyrFqRy1Sqfa6Zb5A8zdM56wRO-fZaHgS_fwRxaVs9BNfOMeeDojNd5OS73HIdOmRsgnPb')"></div>
+</div>
+<div class="md:w-1/2 p-8 flex flex-col justify-between">
+<div>
+<div class="flex gap-1 text-secondary mb-2">
+<span class="material-symbols-outlined fill text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">فندق حياة ريجنسي مكة</h3>
+<div class="space-y-3 mb-6">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md">
+<span class="material-symbols-outlined text-[20px]">distance</span>
+<span class="">200 متر عن الحرم</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+<span class="">جبل عمر، مكة المكرمة</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-primary font-bold">إطلالة على الكعبة</span>
+<span class="text-secondary-container bg-primary px-3 py-1 rounded-md text-xs font-bold">متوفر</span>
+</div>
+</div>
+</div>
+<!-- Hotel Card 2 -->
+<div class="flex flex-col md:flex-row bg-white rounded-2xl overflow-hidden shadow-soft border border-outline-variant/10 group">
+<div class="md:w-1/2 overflow-hidden h-64 md:h-auto">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-MIslCB-Gd1L5-cpeV0rD-9gR4tQkq8vYY5tnxYkg5OsbzoqPN0mpT8sjd6zyvufW9t2KhTtzqIkDf37tYT-ueS7kL0o2o6i2GCv7URg1hQNyus1F0uwyoDqOoDRbYN_KeAwZ6kNfVEw0bHjYbRIxTLvnHFjIrmdr5ETPeIiXwUErUtnQ8cGEJ560Hhgl3Fhsw2KIJruWvzslQ6ZHGBVxqLUp-wwPbKznsjP0PfeEM1WnHITDZZoMwDbTodNSLDb1f56wXTIcnhAk')"></div>
+</div>
+<div class="md:w-1/2 p-8 flex flex-col justify-between">
+<div>
+<div class="flex gap-1 text-secondary mb-2">
+<span class="material-symbols-outlined fill text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">فندق دار الغفران</h3>
+<div class="space-y-3 mb-6">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md">
+<span class="material-symbols-outlined text-[20px]">distance</span>
+<span class="">150 متر عن الحرم</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+<span class="">أبراج الصفوة، مكة المكرمة</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-primary font-bold">بجانب ساحة الحرم</span>
+<span class="text-secondary-container bg-primary px-3 py-1 rounded-md text-xs font-bold">متوفر</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-24 bg-surface-container-low" id="faq">
+<div class="max-w-3xl mx-auto px-margin-mobile md:px-0">
+<div class="text-center mb-12">
+<h2 class="font-display-lg text-display-lg text-primary mb-4">الأسئلة الشائعة</h2>
+<p class="text-on-surface-variant">كل ما تحتاج لمعرفته حول رحلاتنا وخدماتنا</p>
+</div>
+<div class="space-y-4">
+<!-- FAQ 1 -->
+<div class="accordion-item bg-white rounded-xl shadow-sm border border-outline-variant/10 overflow-hidden">
+<button class="w-full flex items-center justify-between p-6 text-right font-headline-md text-headline-md text-primary hover:bg-surface-container transition-colors" onclick="toggleAccordion(this)">
+<span class="">هل السعر يشمل النقل من وإلى الرياض؟</span>
+<span class="material-symbols-outlined icon-rot transition-transform">expand_more</span>
+</button>
+<div class="accordion-content">
+<div class="p-6 pt-0 text-on-surface-variant font-body-md">
+                            نعم، جميع باقاتنا تشمل النقل الجماعي من الرياض والعودة إليها عبر حافلاتنا الحديثة والمكيفة. كما تتوفر خيارات للنقل الخاص في باقة VIP.
+                        </div>
+</div>
+</div>
+<!-- FAQ 2 -->
+<div class="accordion-item bg-white rounded-xl shadow-sm border border-outline-variant/10 overflow-hidden">
+<button class="w-full flex items-center justify-between p-6 text-right font-headline-md text-headline-md text-primary hover:bg-surface-container transition-colors" onclick="toggleAccordion(this)">
+<span class="">كيف يتم الحجز وتأكيد المقعد؟</span>
+<span class="material-symbols-outlined icon-rot transition-transform">expand_more</span>
+</button>
+<div class="accordion-content">
+<div class="p-6 pt-0 text-on-surface-variant font-body-md">
+                            يمكنك الحجز عبر الموقع الإلكتروني مباشرة أو عبر التواصل معنا عبر الواتساب. يتم تأكيد الحجز فور سداد الرسوم المطلوبة وإرسال بيانات المعتمر.
+                        </div>
+</div>
+</div>
+<!-- FAQ 3 -->
+<div class="accordion-item bg-white rounded-xl shadow-sm border border-outline-variant/10 overflow-hidden">
+<button class="w-full flex items-center justify-between p-6 text-right font-headline-md text-headline-md text-primary hover:bg-surface-container transition-colors" onclick="toggleAccordion(this)">
+<span class="">هل تشمل الباقات استخراج تصاريح العمرة؟</span>
+<span class="material-symbols-outlined icon-rot transition-transform">expand_more</span>
+</button>
+<div class="accordion-content">
+<div class="p-6 pt-0 text-on-surface-variant font-body-md">
+                            نعم، يقوم فريقنا بمساعدتكم في إصدار تصاريح العمرة والصلاة في الروضة الشريفة عبر تطبيق "نسك" لضمان رحلة منظمة وسلسة.
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary w-full pt-16 pb-8">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter border-b border-secondary/20 pb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-4 mb-6">
+<img alt="Logo" class="h-12 w-auto brightness-200 rounded" src="https://lh3.googleusercontent.com/aida/AP1WRLsl4NK2Kz9W7yFiajrOZfAc7PFULtgmNu07SralpzwwlnTD_INOVzqWBvrXE8VFZYFYVnZZ0rFDaTweoYM_ehbptJ5J7JXKrg8a1Ui0cPdgIISuEedejP732bK0OT0Z6pJUnAaULroibxM_k1_nwwZh2WKZMuyLlJs_Od_5ESCYl-dbeW2UZO2e1m5_hHvk7HJGMqHmK_3pYemu2grD83kNdi8tmPf5jrPbFe21Y2vGKP1VJYGQaq_BUKyV">
+<span class="font-headline-md text-headline-md text-on-primary">قافلة المؤمنين</span>
+</div>
+<p class="font-body-md text-body-md text-on-primary/70 mb-6">نسعى لتقديم تجربة عمرة استثنائية تجمع بين الروحانية والراحة التامة لضيوف الرحمن.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-secondary-container mb-6">روابط سريعة</h4>
+<ul class="space-y-4 font-label-sm text-label-sm">
+<li class=""><a class="text-on-primary/80 hover:text-secondary-container transition-colors" href="#">الرئيسية</a></li>
+<li class=""><a class="text-on-primary/80 hover:text-secondary-container transition-colors" href="#packages">باقات العمرة</a></li>
+<li class=""><a class="text-on-primary/80 hover:text-secondary-container transition-colors" href="#buses">أسطول الباصات</a></li>
+<li class=""><a class="text-on-primary/80 hover:text-secondary-container transition-colors" href="#hotels">فنادقنا</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-secondary-container mb-6">المعلومات القانونية</h4>
+<ul class="space-y-4 font-label-sm text-label-sm">
+<li class=""><a class="text-on-primary/80 hover:text-secondary-container transition-colors" href="#">سياسة الخصوصية</a></li>
+<li class=""><a class="text-on-primary/80 hover:text-secondary-container transition-colors" href="#">الشروط والأحكام</a></li>
+<li class=""><a class="text-on-primary/80 hover:text-secondary-container transition-colors" href="#">تراخيص الوكالة</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-secondary-container mb-6">تواصل معنا</h4>
+<ul class="space-y-4 font-body-md text-body-md text-on-primary/80">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+<span class="">الرياض، حي الملز، طريق صلاح الدين</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">phone</span>
+<span class="">9665XXXXXXXX+</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">mail</span>
+<span class="">info@qafilat.com</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-8 flex flex-col md:flex-row justify-between items-center text-on-primary/60 font-label-sm text-label-sm">
+<p class="">© 2024 قافلة المؤمنين. جميع الحقوق محفوظة.</p>
+<div class="flex gap-4 mt-4 md:mt-0">
+<span class="">تطوير شركة إحسان للحلول الرقمية</span>
+</div>
+</div>
+</footer>
+<script>
+    function toggleAccordion(btn) {
+        const item = btn.parentElement;
+        const isActive = item.classList.contains('active');
+        
+        document.querySelectorAll('.accordion-item').forEach(el => {
+            el.classList.remove('active');
+        });
+        
+        if (!isActive) {
+            item.classList.add('active');
+        }
+    }
+
+    // Header Scroll Effect
+    window.addEventListener('scroll', () => {
+        const header = document.getElementById('main-header');
+        if (window.scrollY > 20) {
+            header.classList.remove('h-24');
+            header.classList.add('h-20', 'shadow-lg');
+            header.style.background = 'rgba(252, 248, 249, 0.95)';
+        } else {
+            header.classList.remove('h-20', 'shadow-lg');
+            header.classList.add('h-24');
+            header.style.background = 'rgba(252, 248, 249, 0.8)';
+        }
+    });
+</script>
+
+
+</body></html>

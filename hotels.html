@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>فنادقنا المختارة | قافلة المؤمنين</title>
+  <meta name="description" content="احجز فنادق مكة المكرمة المختارة بعناية مع قافلة المؤمنين. فنادق فاخرة قريبة من الحرم بأسعار تنافسية. احجز الآن.">
+  <meta property="og:title" content="فنادقنا المختارة | قافلة المؤمنين">
+  <meta property="og:description" content="فنادق مكة المكرمة المختارة بعناية. فنادق فاخرة قريبة من الحرم بأسعار تنافسية.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_SA">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#001b0f',
+            secondary: '#735c00',
+            background: '#fcf8f9',
+            'primary-container': '#013220',
+            'secondary-container': '#fed65b',
+          },
+          fontFamily: {
+            sans: ['Cairo', 'sans-serif'],
+            serif: ['Cairo', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Cairo', sans-serif; background-color: #fcf8f9; }
+    .gold-gradient { background: linear-gradient(135deg, #fed65b 0%, #735c00 100%); }
+    .card-shadow { box-shadow: 0 4px 20px rgba(0,27,15,0.10); }
+    .islamic-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z' fill='none' stroke='%23735c0015' stroke-width='1'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+    }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes slideInRight { from{transform:translateX(100%)} to{transform:translateX(0)} }
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    .lightbox { position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:100;display:none;align-items:center;justify-content:center; }
+    .lightbox.active { display:flex; }
+    .lightbox img { max-width:90vw;max-height:90vh;object-fit:contain;border-radius:12px; }
+    .mobile-menu { position:fixed;top:0;left:0;width:300px;height:100vh;background:#001b0f;z-index:90;transform:translateX(-100%);transition:transform 0.4s ease; }
+    .mobile-menu.active { transform:translateX(0); }
+    .nav-link { position:relative; }
+    .nav-link::after { content:'';position:absolute;bottom:-4px;right:0;width:0;height:2px;background:#fed65b;transition:width 0.3s ease; }
+    .nav-link:hover::after, .nav-link.active::after { width:100%; }
+    .hotel-card { transition: transform 0.4s ease, box-shadow 0.4s ease; }
+    .hotel-card:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(0,27,15,0.15); }
+    .hotel-card .card-image { overflow: hidden; }
+    .hotel-card .card-image img { transition: transform 0.6s ease; }
+    .hotel-card:hover .card-image img { transform: scale(1.08); }
+    .filter-btn { transition: all 0.3s ease; }
+    .filter-btn.active { background: #013220; color: #fed65b; border-color: #013220; }
+    .star-badge { background: linear-gradient(135deg, #fed65b, #735c00); }
+  </style>
+</head>
+<body class="bg-background">
+
+  <!-- Header -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8ZLay52sBYHnAH4e4xG8gwKfNkrsiYZ3YOzneRkiwAuVnPEvojOy92Yy9fai-T2vwYbLpNwifPJ43L3-V6XlzXitH0yNB_YSUGBAyBoD4uTHF69KusYIs4w3IIFr6ZSXiqMkcFcivJinT1h1kR2-CuMA-Ueq5RsGbsjAMM4c4xyIk23aeNDw9XVBzz1a9rLjSXWCcdjcLUNUmM9U0NdmDNQkVYrnx-0J3r5uHLmBPre-_j-GoLeaTsMVgyHA5qixbZ8qkBtgMKVJ3" alt="شعار قافلة المؤمنين" class="h-10 md:h-12">
+          <div class="flex flex-col">
+            <span class="text-primary font-bold text-lg md:text-xl leading-tight font-sans">قافلة المؤمنين</span>
+            <span class="text-secondary text-[10px] md:text-xs tracking-wider font-light">QAFILAT AL-MU'MININ</span>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link text-primary font-medium hover:text-secondary transition-colors">الرئيسية</a>
+          <a href="buses.html" class="nav-link text-primary font-medium hover:text-secondary transition-colors">الباصات</a>
+          <a href="hotels.html" class="nav-link active text-secondary font-medium">الفنادق</a>
+          <a href="index.html#contact" class="nav-link text-primary font-medium hover:text-secondary transition-colors">تواصل</a>
+        </nav>
+        <div class="flex items-center gap-4">
+          <a href="https://wa.me/966548823582" target="_blank" class="hidden md:inline-flex items-center gap-2 gold-gradient text-primary font-bold px-5 py-2.5 rounded-full text-sm hover:opacity-90 transition-opacity">
+            <span class="material-symbols-outlined text-lg">chat</span>
+            احجز الآن
+          </a>
+          <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="القائمة">
+            <span class="material-symbols-outlined text-2xl text-primary">menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu">
+    <div class="flex items-center justify-between p-5 border-b border-white/10">
+      <span class="text-white font-bold text-lg">القائمة</span>
+      <button id="closeMenu" class="p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="إغلاق">
+        <span class="material-symbols-outlined text-white text-2xl">close</span>
+      </button>
+    </div>
+    <nav class="flex flex-col p-6 gap-1">
+      <a href="index.html" class="text-white py-3 px-4 rounded-lg hover:bg-white/10 transition-colors font-medium">الرئيسية</a>
+      <a href="buses.html" class="text-white py-3 px-4 rounded-lg hover:bg-white/10 transition-colors font-medium">الباصات</a>
+      <a href="hotels.html" class="text-secondary-container py-3 px-4 rounded-lg bg-white/10 font-medium">الفنادق</a>
+      <a href="index.html#contact" class="text-white py-3 px-4 rounded-lg hover:bg-white/10 transition-colors font-medium">تواصل</a>
+    </nav>
+    <div class="p-6 border-t border-white/10">
+      <a href="https://wa.me/966548823582" target="_blank" class="block text-center gold-gradient text-primary font-bold py-3 rounded-full">احجز عبر واتساب</a>
+    </div>
+  </div>
+  <div id="menuOverlay" class="fixed inset-0 bg-black/50 z-80 hidden"></div>
+
+  <!-- Hero -->
+  <section class="relative pt-28 pb-16 md:pt-36 md:pb-24 islamic-pattern overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary/70"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block text-secondary-container text-sm font-medium mb-4 bg-primary-container/80 px-4 py-1.5 rounded-full">فنادق مميزة</span>
+      <h1 class="text-3xl md:text-5xl lg:text-6xl font-sans font-bold text-white mb-6 leading-tight">فنادقنا المختارة</h1>
+      <p class="text-white/80 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">نختار لك أفضل الفنادق في مكة المكرمة بمعايير عالية من الجودة والرفاهية، قريبة من الحرم المكي لتجربة عزاء مريحة</p>
+    </div>
+  </section>
+
+  <!-- Filter Buttons -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10">
+    <div class="bg-white rounded-2xl card-shadow p-4 flex flex-wrap items-center justify-center gap-3">
+      <button class="filter-btn active px-6 py-2.5 rounded-full border-2 border-primary text-sm font-semibold transition-all" data-filter="all">الكل</button>
+      <button class="filter-btn px-6 py-2.5 rounded-full border-2 border-gray-300 text-primary text-sm font-semibold hover:border-primary transition-all" data-filter="5">٥ نجوم</button>
+      <button class="filter-btn px-6 py-2.5 rounded-full border-2 border-gray-300 text-primary text-sm font-semibold hover:border-primary transition-all" data-filter="4">٤ نجوم</button>
+      <button class="filter-btn px-6 py-2.5 rounded-full border-2 border-gray-300 text-primary text-sm font-semibold hover:border-primary transition-all" data-filter="3">٣ نجوم</button>
+    </div>
+  </section>
+
+  <!-- Hotel Cards Grid -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div id="hotelsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+      <!-- Hotel 1 -->
+      <article class="hotel-card bg-white rounded-2xl card-shadow overflow-hidden reveal" data-stars="5">
+        <div class="card-image relative h-52">
+          <img src="imges/hotel/h1.jpg" alt="فندق ميلينيوم مكة" class="w-full h-full object-cover cursor-pointer" loading="lazy">
+          <span class="absolute top-3 right-3 star-badge text-primary text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">star</span> ٥ نجوم
+          </span>
+        </div>
+        <div class="p-5">
+          <h3 class="text-primary font-bold text-lg mb-1">فندق ميلينيوم مكة</h3>
+          <p class="text-gray-500 text-sm flex items-center gap-1 mb-4">
+            <span class="material-symbols-outlined text-secondary text-base">location_on</span>
+            ١٨٠٠ م من الحرم
+          </p>
+          <a href="https://wa.me/966548823582" target="_blank" class="block text-center gold-gradient text-primary font-bold py-2.5 rounded-full text-sm hover:opacity-90 transition-opacity">احجز الآن</a>
+        </div>
+      </article>
+
+      <!-- Hotel 2 -->
+      <article class="hotel-card bg-white rounded-2xl card-shadow overflow-hidden reveal" data-stars="5">
+        <div class="card-image relative h-52">
+          <img src="imges/hotel/h2.jpg" alt="فندق فوكو مكة" class="w-full h-full object-cover cursor-pointer" loading="lazy">
+          <span class="absolute top-3 right-3 star-badge text-primary text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">star</span> ٥ نجوم
+          </span>
+        </div>
+        <div class="p-5">
+          <h3 class="text-primary font-bold text-lg mb-1">فوكو مكة</h3>
+          <p class="text-gray-500 text-sm flex items-center gap-1 mb-4">
+            <span class="material-symbols-outlined text-secondary text-base">location_on</span>
+            ١٥٠٠ متر من الحرم
+          </p>
+          <a href="https://wa.me/966548823582" target="_blank" class="block text-center gold-gradient text-primary font-bold py-2.5 rounded-full text-sm hover:opacity-90 transition-opacity">احجز الآن</a>
+        </div>
+      </article>
+
+      <!-- Hotel 3 -->
+      <article class="hotel-card bg-white rounded-2xl card-shadow overflow-hidden reveal" data-stars="4">
+        <div class="card-image relative h-52">
+          <img src="imges/hotel/h3.jpg" alt="أم الدانة مكة من ميلينيوم" class="w-full h-full object-cover cursor-pointer" loading="lazy">
+          <span class="absolute top-3 right-3 star-badge text-primary text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">star</span> ٤ نجوم
+          </span>
+        </div>
+        <div class="p-5">
+          <h3 class="text-primary font-bold text-lg mb-1">أم الدانة مكة من ميلينيوم</h3>
+          <p class="text-gray-500 text-sm flex items-center gap-1 mb-4">
+            <span class="material-symbols-outlined text-secondary text-base">hotel</span>
+            ٤ نجوم
+          </p>
+          <a href="https://wa.me/966548823582" target="_blank" class="block text-center gold-gradient text-primary font-bold py-2.5 rounded-full text-sm hover:opacity-90 transition-opacity">احجز الآن</a>
+        </div>
+      </article>
+
+      <!-- Hotel 4 -->
+      <article class="hotel-card bg-white rounded-2xl card-shadow overflow-hidden reveal" data-stars="5">
+        <div class="card-image relative h-52">
+          <img src="imges/hotel/h5.jpg" alt="فندق رهف المشاعر" class="w-full h-full object-cover cursor-pointer" loading="lazy">
+          <span class="absolute top-3 right-3 star-badge text-primary text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">star</span> ٥ نجوم
+          </span>
+        </div>
+        <div class="p-5">
+          <h3 class="text-primary font-bold text-lg mb-1">فندق رهف المشاعر</h3>
+          <p class="text-gray-500 text-sm flex items-center gap-1 mb-4">
+            <span class="material-symbols-outlined text-secondary text-base">directions_bus</span>
+            ٥ دقائق بالباص من الحرم
+          </p>
+          <a href="https://wa.me/966548823582" target="_blank" class="block text-center gold-gradient text-primary font-bold py-2.5 rounded-full text-sm hover:opacity-90 transition-opacity">احجز الآن</a>
+        </div>
+      </article>
+
+      <!-- Hotel 5 -->
+      <article class="hotel-card bg-white rounded-2xl card-shadow overflow-hidden reveal" data-stars="4">
+        <div class="card-image relative h-52">
+          <img src="imges/hotel/h7.jpg" alt="فندق منى كونكورد العزيزية" class="w-full h-full object-cover cursor-pointer" loading="lazy">
+          <span class="absolute top-3 right-3 star-badge text-primary text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">star</span> ٤ نجوم
+          </span>
+        </div>
+        <div class="p-5">
+          <h3 class="text-primary font-bold text-lg mb-1">فندق منى كونكورد العزيزية</h3>
+          <p class="text-gray-500 text-sm flex items-center gap-1 mb-4">
+            <span class="material-symbols-outlined text-secondary text-base">directions_bus</span>
+            ٥ دقائق بالباص من الحرم
+          </p>
+          <a href="https://wa.me/966548823582" target="_blank" class="block text-center gold-gradient text-primary font-bold py-2.5 rounded-full text-sm hover:opacity-90 transition-opacity">احجز الآن</a>
+        </div>
+      </article>
+
+      <!-- Hotel 6 -->
+      <article class="hotel-card bg-white rounded-2xl card-shadow overflow-hidden reveal" data-stars="5">
+        <div class="card-image relative h-52">
+          <img src="imges/hotel/h10.jpg" alt="فندق فلسطين مكة" class="w-full h-full object-cover cursor-pointer" loading="lazy">
+          <span class="absolute top-3 right-3 star-badge text-primary text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">star</span> ٥ نجوم
+          </span>
+        </div>
+        <div class="p-5">
+          <h3 class="text-primary font-bold text-lg mb-1">فندق فلسطين مكة</h3>
+          <p class="text-gray-500 text-sm flex items-center gap-1 mb-4">
+            <span class="material-symbols-outlined text-secondary text-base">location_on</span>
+            ٩٠٠ م من الحرم
+          </p>
+          <a href="https://wa.me/966548823582" target="_blank" class="block text-center gold-gradient text-primary font-bold py-2.5 rounded-full text-sm hover:opacity-90 transition-opacity">احجز الآن</a>
+        </div>
+      </article>
+
+      <!-- Hotel 7 -->
+      <article class="hotel-card bg-white rounded-2xl card-shadow overflow-hidden reveal" data-stars="3">
+        <div class="card-image relative h-52">
+          <img src="imges/hotel/h11.jpg" alt="فندق مكارم البيت" class="w-full h-full object-cover cursor-pointer" loading="lazy">
+          <span class="absolute top-3 right-3 star-badge text-primary text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">star</span> ٣ نجوم
+          </span>
+        </div>
+        <div class="p-5">
+          <h3 class="text-primary font-bold text-lg mb-1">فندق مكارم البيت</h3>
+          <p class="text-gray-500 text-sm flex items-center gap-1 mb-4">
+            <span class="material-symbols-outlined text-secondary text-base">location_on</span>
+            ١.٥ كم من الحرم
+          </p>
+          <a href="https://wa.me/966548823582" target="_blank" class="block text-center gold-gradient text-primary font-bold py-2.5 rounded-full text-sm hover:opacity-90 transition-opacity">احجز الآن</a>
+        </div>
+      </article>
+
+      <!-- Hotel 8 -->
+      <article class="hotel-card bg-white rounded-2xl card-shadow overflow-hidden reveal" data-stars="5">
+        <div class="card-image relative h-52">
+          <img src="imges/hotel/hotel-5stars-kaaba-view.webp" alt="فندق الإيمان مكة" class="w-full h-full object-cover cursor-pointer" loading="lazy">
+          <span class="absolute top-3 right-3 star-badge text-primary text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">star</span> ٥ نجوم
+          </span>
+        </div>
+        <div class="p-5">
+          <h3 class="text-primary font-bold text-lg mb-1">فندق الإيمان مكة</h3>
+          <p class="text-gray-500 text-sm flex items-center gap-1 mb-4">
+            <span class="material-symbols-outlined text-secondary text-base">location_on</span>
+            ٢٠٠ م من الحرم
+          </p>
+          <a href="https://wa.me/966548823582" target="_blank" class="block text-center gold-gradient text-primary font-bold py-2.5 rounded-full text-sm hover:opacity-90 transition-opacity">احجز الآن</a>
+        </div>
+      </article>
+
+      <!-- Hotel 9 -->
+      <article class="hotel-card bg-white rounded-2xl card-shadow overflow-hidden reveal" data-stars="5">
+        <div class="card-image relative h-52">
+          <img src="imges/hotel/hotel2.webp" alt="فندق أبراج مكة" class="w-full h-full object-cover cursor-pointer" loading="lazy">
+          <span class="absolute top-3 right-3 star-badge text-primary text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">star</span> ٥ نجوم
+          </span>
+        </div>
+        <div class="p-5">
+          <h3 class="text-primary font-bold text-lg mb-1">فندق أبراج مكة</h3>
+          <p class="text-gray-500 text-sm flex items-center gap-1 mb-4">
+            <span class="material-symbols-outlined text-secondary text-base">location_on</span>
+            ٥٠٠ م من الحرم
+          </p>
+          <a href="https://wa.me/966548823582" target="_blank" class="block text-center gold-gradient text-primary font-bold py-2.5 rounded-full text-sm hover:opacity-90 transition-opacity">احجز الآن</a>
+        </div>
+      </article>
+
+      <!-- Hotel 10 -->
+      <article class="hotel-card bg-white rounded-2xl card-shadow overflow-hidden reveal" data-stars="5">
+        <div class="card-image relative h-52">
+          <img src="imges/hotel/vip1.webp" alt="جنة مكة الفاخرة" class="w-full h-full object-cover cursor-pointer" loading="lazy">
+          <span class="absolute top-3 right-3 star-badge text-primary text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">star</span> ٥ نجوم
+          </span>
+        </div>
+        <div class="p-5">
+          <h3 class="text-primary font-bold text-lg mb-1">جنة مكة الفاخرة</h3>
+          <p class="text-gray-500 text-sm flex items-center gap-1 mb-4">
+            <span class="material-symbols-outlined text-secondary text-base">location_on</span>
+            قريب من الحرم
+          </p>
+          <a href="https://wa.me/966548823582" target="_blank" class="block text-center gold-gradient text-primary font-bold py-2.5 rounded-full text-sm hover:opacity-90 transition-opacity">احجز الآن</a>
+        </div>
+      </article>
+
+      <!-- Hotel 11 -->
+      <article class="hotel-card bg-white rounded-2xl card-shadow overflow-hidden reveal" data-stars="4">
+        <div class="card-image relative h-52">
+          <img src="imges/hotel/vip16.webp" alt="الدار البيضاء مكة" class="w-full h-full object-cover cursor-pointer" loading="lazy">
+          <span class="absolute top-3 right-3 star-badge text-primary text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">star</span> ٤ نجوم
+          </span>
+        </div>
+        <div class="p-5">
+          <h3 class="text-primary font-bold text-lg mb-1">الدار البيضاء مكة</h3>
+          <p class="text-gray-500 text-sm flex items-center gap-1 mb-4">
+            <span class="material-symbols-outlined text-secondary text-base">location_on</span>
+            ٧٠٠ م من الحرم
+          </p>
+          <a href="https://wa.me/966548823582" target="_blank" class="block text-center gold-gradient text-primary font-bold py-2.5 rounded-full text-sm hover:opacity-90 transition-opacity">احجز الآن</a>
+        </div>
+      </article>
+
+      <!-- Hotel 12 -->
+      <article class="hotel-card bg-white rounded-2xl card-shadow overflow-hidden reveal" data-stars="4">
+        <div class="card-image relative h-52">
+          <img src="imges/hotel/vip2.webp" alt="المسرة مكة" class="w-full h-full object-cover cursor-pointer" loading="lazy">
+          <span class="absolute top-3 right-3 star-badge text-primary text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">star</span> ٤ نجوم
+          </span>
+        </div>
+        <div class="p-5">
+          <h3 class="text-primary font-bold text-lg mb-1">المسرة مكة</h3>
+          <p class="text-gray-500 text-sm flex items-center gap-1 mb-4">
+            <span class="material-symbols-outlined text-secondary text-base">location_on</span>
+            ١ كم من الحرم
+          </p>
+          <a href="https://wa.me/966548823582" target="_blank" class="block text-center gold-gradient text-primary font-bold py-2.5 rounded-full text-sm hover:opacity-90 transition-opacity">احجز الآن</a>
+        </div>
+      </article>
+
+      <!-- Hotel 13 -->
+      <article class="hotel-card bg-white rounded-2xl card-shadow overflow-hidden reveal" data-stars="4">
+        <div class="card-image relative h-52">
+          <img src="imges/hotel/vip4.webp" alt="القمر مكة" class="w-full h-full object-cover cursor-pointer" loading="lazy">
+          <span class="absolute top-3 right-3 star-badge text-primary text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">star</span> ٤ نجوم
+          </span>
+        </div>
+        <div class="p-5">
+          <h3 class="text-primary font-bold text-lg mb-1">القمر مكة</h3>
+          <p class="text-gray-500 text-sm flex items-center gap-1 mb-4">
+            <span class="material-symbols-outlined text-secondary text-base">location_on</span>
+            ١.٢ كم من الحرم
+          </p>
+          <a href="https://wa.me/966548823582" target="_blank" class="block text-center gold-gradient text-primary font-bold py-2.5 rounded-full text-sm hover:opacity-90 transition-opacity">احجز الآن</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8ZLay52sBYHnAH4e4xG8gwKfNkrsiYZ3YOzneRkiwAuVnPEvojOy92Yy9fai-T2vwYbLpNwifPJ43L3-V6XlzXitH0yNB_YSUGBAyBoD4uTHF69KusYIs4w3IIFr6ZSXiqMkcFcivJinT1h1kR2-CuMA-Ueq5RsGbsjAMM4c4xyIk23aeNDw9XVBzz1a9rLjSXWCcdjcLUNUmM9U0NdmDNQkVYrnx-0J3r5uHLmBPre-_j-GoLeaTsMVgyHA5qixbZ8qkBtgMKVJ3" alt="شعار قافلة المؤمنين" class="h-12">
+            <div>
+              <span class="text-white font-bold text-xl block">قافلة المؤمنين</span>
+              <span class="text-secondary-container text-xs">QAFILAT AL-MU'MININ</span>
+            </div>
+          </div>
+          <p class="text-white/70 text-sm leading-relaxed">شريكك الموثوق في رحلات العمرة والحج. نقدم خدمات نقل مريحة وفنادق فاخرة بأسعار تنافسية.</p>
+        </div>
+        <div>
+          <h3 class="text-secondary-container font-bold text-lg mb-6">روابط سريعة</h3>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-white/70 hover:text-secondary-container transition-colors text-sm">الرئيسية</a></li>
+            <li><a href="buses.html" class="text-white/70 hover:text-secondary-container transition-colors text-sm">الباصات</a></li>
+            <li><a href="hotels.html" class="text-white/70 hover:text-secondary-container transition-colors text-sm">الفنادق</a></li>
+            <li><a href="index.html#contact" class="text-white/70 hover:text-secondary-container transition-colors text-sm">تواصل معنا</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-secondary-container font-bold text-lg mb-6">تواصل معنا</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-white/70 text-sm">
+              <span class="material-symbols-outlined text-secondary-container text-xl">phone</span>
+              0548823582
+            </li>
+            <li class="flex items-center gap-3 text-white/70 text-sm">
+              <span class="material-symbols-outlined text-secondary-container text-xl">chat</span>
+              واتساب: 0548823582
+            </li>
+            <li class="flex items-center gap-3 text-white/70 text-sm">
+              <span class="material-symbols-outlined text-secondary-container text-xl">schedule</span>
+              ٨ صباحًا - ١٢ منتصف الليل
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-12 pt-8 text-center">
+        <p class="text-white/50 text-sm">© 2026 قافلة المؤمنين. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Buttons -->
+  <a href="tel:0548823582" class="fixed bottom-24 right-6 z-40 w-14 h-14 rounded-full bg-green-600 text-white flex items-center justify-center shadow-lg hover:bg-green-700 transition-colors" aria-label="اتصال مباشر">
+    <span class="material-symbols-outlined text-2xl">call</span>
+  </a>
+  <a href="https://wa.me/966548823582" target="_blank" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full text-white flex items-center justify-center shadow-lg hover:opacity-90 transition-opacity" style="background-color:#25D366;animation:float 3s ease-in-out infinite" aria-label="واتساب">
+    <span class="material-symbols-outlined text-2xl">chat</span>
+  </a>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <button class="absolute top-4 left-4 text-white/70 hover:text-white transition-colors" aria-label="إغلاق">
+      <span class="material-symbols-outlined text-4xl">close</span>
+    </button>
+    <img id="lightboxImg" src="" alt="">
+  </div>
+
+  <script>
+    // Header scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('shadow-md', window.scrollY > 20);
+    });
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const closeMenu = document.getElementById('closeMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+    function openMobileMenu() {
+      mobileMenu.classList.add('active');
+      menuOverlay.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('active');
+      menuOverlay.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+    menuBtn.addEventListener('click', openMobileMenu);
+    closeMenu.addEventListener('click', closeMobileMenu);
+    menuOverlay.addEventListener('click', closeMobileMenu);
+
+    // Reveal on scroll
+    const revealElements = document.querySelectorAll('.reveal');
+    function checkReveal() {
+      revealElements.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 80) {
+          el.classList.add('active');
+        }
+      });
+    }
+    window.addEventListener('scroll', checkReveal);
+    window.addEventListener('load', checkReveal);
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    document.querySelectorAll('.card-image img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Filter buttons
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const hotelCards = document.querySelectorAll('.hotel-card');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        hotelCards.forEach(card => {
+          if (filter === 'all' || card.dataset.stars === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Button interactions
+    document.querySelectorAll('.gold-gradient, [class*="gold-gradient"]').forEach(btn => {
+      btn.addEventListener('mousedown', function() { this.style.transform = 'scale(0.97)'; });
+      btn.addEventListener('mouseup', function() { this.style.transform = ''; });
+      btn.addEventListener('mouseleave', function() { this.style.transform = ''; });
+    });
+  </script>
+
+</body>
+</html>

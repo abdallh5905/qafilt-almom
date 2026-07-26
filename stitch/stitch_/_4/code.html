@@ -1,0 +1,389 @@
+<!DOCTYPE html><html dir="rtl" lang="ar"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>أسطول الباصات الحديثة | قافلة المؤمنين</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&amp;family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c1c8c2",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#2b2b26",
+                    "on-primary": "#ffffff",
+                    "surface-bright": "#fcf8f9",
+                    "surface-tint": "#3b6751",
+                    "surface": "#fcf8f9",
+                    "surface-container": "#f0edee",
+                    "on-tertiary-fixed-variant": "#474741",
+                    "on-background": "#1b1b1c",
+                    "on-primary-container": "#6f9c84",
+                    "primary-fixed-dim": "#a2d1b7",
+                    "on-secondary-fixed-variant": "#574500",
+                    "inverse-primary": "#a2d1b7",
+                    "secondary": "#735c00",
+                    "tertiary-fixed": "#e5e2db",
+                    "surface-container-high": "#eae7e8",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed": "#ffe088",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#bdedd2",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e5e2e3",
+                    "on-surface": "#1b1b1c",
+                    "background": "#fcf8f9",
+                    "on-tertiary-fixed": "#1c1c17",
+                    "tertiary-fixed-dim": "#c9c6bf",
+                    "secondary-container": "#fed65b",
+                    "on-primary-fixed-variant": "#234f3b",
+                    "inverse-surface": "#303031",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-surface-variant": "#414943",
+                    "surface-dim": "#dcd9da",
+                    "primary": "#001b0f",
+                    "on-secondary-container": "#745c00",
+                    "surface-variant": "#e5e2e3",
+                    "tertiary": "#161712",
+                    "inverse-on-surface": "#f3f0f1",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#93928b",
+                    "primary-container": "#013220",
+                    "surface-container-low": "#f6f3f4",
+                    "on-primary-fixed": "#002113",
+                    "on-secondary-fixed": "#241a00",
+                    "outline": "#717973",
+                    "surface-container-lowest": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "container-max": "1280px",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "body-md": ["IBM Plex Sans Arabic"],
+                    "display-lg": ["Noto Serif"],
+                    "label-sm": ["IBM Plex Sans Arabic"],
+                    "display-lg-mobile": ["Noto Serif"],
+                    "headline-md": ["Noto Serif"],
+                    "body-lg": ["IBM Plex Sans Arabic"],
+                    "headline-lg": ["Noto Serif"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        background-color: #fcf8f9;
+        font-family: 'IBM Plex Sans Arabic', sans-serif;
+        color: #1b1b1c;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .islamic-pattern {
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l2.5 12.5L45 15l-12.5 2.5L30 30l-2.5-12.5L15 15l12.5-2.5z' fill='%23013220' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+      }
+      .gold-gradient-hover:hover {
+        background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+      }
+      .card-shadow {
+        box-shadow: 0px 4px 20px rgba(1, 50, 32, 0.05);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 backdrop-blur-md border-outline-variant/30 shadow-sm bg-transparent">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+<div class="flex items-center gap-4">
+<img alt="Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLsPaam7Q7YiHD1H8oskGlw4cFxAV2lN72bbn8tgNMoMr6nfOBsqVu7gFUm2HzHYwiUyHsVXtpMqU16GvBX32WSol0yMIrhUVeDjZvfdj4ldMGRe4okIjklovrEwUdBvdwzG0m-E45FwKNCbTUE1AoK8cyqvtkRvBoT0DdYB1xnf-f0plk0Irg6qEtLicYMnanjwFcnVFj3HLeHFCNyzQBXxXleJhsv7CT-BzPONKMok5CvneL7YHFoUEBiJ">
+<h1 class="font-headline-md text-headline-md font-bold text-primary"><span class="text-white">قافلة المؤمنين</span></h1>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-label-sm text-label-sm hover:text-primary transition-colors text-white" href="#">الرئيسية</a>
+<a class="font-label-sm text-label-sm font-bold relative after:content-[''] after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-secondary after:rounded-full text-white" href="#">الباصات</a>
+<a class="font-label-sm text-label-sm hover:text-primary transition-colors text-white" href="#">الفنادق</a>
+<a class="font-label-sm text-label-sm hover:text-primary transition-colors text-white" href="#">اتصل بنا</a>
+<button class="bg-primary-container text-on-primary px-6 py-2 rounded-lg font-label-sm text-label-sm transition-all duration-300 hover:opacity-90 active:scale-95 text-white">احجز الآن</button>
+</nav>
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="pt-32 pb-20 islamic-pattern min-h-screen">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-16 text-center">
+<h2 class="font-display-lg text-display-lg text-primary mb-4">أسطول الباصات الحديثة</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                نقدم لكم تجربة سفر روحانية مريحة مع أحدث أسطول من الحافلات الفاخرة المجهزة بكافة وسائل الراحة لضمان رحلة آمنة ومطمئنة لضيوف الرحمن.
+            </p>
+<div class="w-24 h-1 bg-secondary mx-auto mt-8 opacity-50"></div>
+</section>
+<!-- Filters (Micro-interaction) -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-12 flex flex-wrap gap-4 justify-center">
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2 rounded-full font-label-sm text-label-sm border border-secondary transition-all">الكل</button>
+<button class="bg-surface-container-low text-on-surface-variant px-6 py-2 rounded-full font-label-sm text-label-sm hover:bg-secondary-container/20 transition-all">كبار الشخصيات (VIP)</button>
+<button class="bg-surface-container-low text-on-surface-variant px-6 py-2 rounded-full font-label-sm text-label-sm hover:bg-secondary-container/20 transition-all">اقتصادية</button>
+</section>
+<!-- Bus Grid -->
+<section class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Bus Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-xl overflow-hidden card-shadow group transition-all duration-500 hover:-translate-y-2">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A modern, high-end white luxury bus with golden trim, parked in a serene environment with palm trees. The lighting is soft and golden, evocative of a late afternoon in the Hijaz region. The overall aesthetic is clean, minimalist, and premium, aligned with a high-end Umrah travel brand. High-resolution photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo6CpVKu94wFCDxeKbFMP2mKj0WrVB0h1Z0bZ0dWR8HgGjKmKQp77M7fIkrwCxcZFEYD7Nhuadvjd0q83jNq8jdNrqbd8A7mimO-EXlZPcy-Vxac6s5yMGlvokQ0wmwRy9YOSrpjW40f4HHxlJbDQIm4LDvvmrUMlgYvE0ueWj4WGvBMT_akUvdA11__D8QMaXXOCjYZUdYKDyecaIYqggWYwCNaCKugJ9XN7wJ1sKumvvVg9ZmrggPqzdwQAJ7ywon6x_GQDh_Ffo">
+<div class="absolute top-4 left-4 bg-primary/90 text-on-primary text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-widest backdrop-blur-sm">VIP PREMIUM</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md text-primary">مرسيدس بنز الفاخرة</h3>
+<span class="text-secondary font-bold font-body-md">2024</span>
+</div>
+<div class="flex items-center gap-4 mb-6 text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">airline_seat_recline_extra</span>
+<span class="text-label-sm font-label-sm">30 مقعد</span>
+</div>
+<div class="w-px h-4 bg-outline-variant"></div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">ac_unit</span>
+<span class="text-label-sm font-label-sm">تكييف مركزي</span>
+</div>
+</div>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center gap-2 text-body-md font-body-md text-on-surface-variant/80">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+                                مقاعد قابلة للإمالة بالكامل
+                            </li>
+<li class="flex items-center gap-2 text-body-md font-body-md text-on-surface-variant/80">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+                                منافذ شحن USB لكل مقعد
+                            </li>
+<li class="flex items-center gap-2 text-body-md font-body-md text-on-surface-variant/80">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+                                شبكة WiFi عالية السرعة
+                            </li>
+</ul>
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-label-sm text-label-sm font-bold gold-gradient-hover transition-all duration-300 shadow-md">احجز مقعدك</button>
+</div>
+</div>
+<!-- Bus Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-xl overflow-hidden card-shadow group transition-all duration-500 hover:-translate-y-2">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Exterior view of a sleek, modern silver transit bus designed for religious tourism. The bus features a subtle geometric pattern wrap on the rear. The setting is a clean, bright terminal at dusk with soft indigo skies and warm interior lights shining through the large bus windows. Minimalist and professional travel imagery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWtFAsIqGTHUQjC6D04O6PlZS0V-_PLLKl5Ygk3bPLzzQTNlkQ2FjroDny81QDbBZc3etfA1fGg4gMsoF2tnXXroC15gTJ_CtCgqwu5mKKzY2QdxxvLYdovGqPCqNodntrfQeppQBXcMgjwH5PqyzR-cwRi9leSnP1vWAwCaIce3z-rRW8oUAFgGgr5j_xjVf_4KRSFaY8LxQwyNvotTP_isE0sQpQkTjDKx1v-yHTtkuVNsdtj_N2_aMan-MBggPu64Yi9axiJbty">
+<div class="absolute top-4 left-4 bg-secondary/90 text-on-secondary text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-widest backdrop-blur-sm">STANDARD</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md text-primary">حافلة سفاري الحديثة</h3>
+<span class="text-secondary font-bold font-body-md">2023</span>
+</div>
+<div class="flex items-center gap-4 mb-6 text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">airline_seat_recline_extra</span>
+<span class="text-label-sm font-label-sm">49 مقعد</span>
+</div>
+<div class="w-px h-4 bg-outline-variant"></div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">ac_unit</span>
+<span class="text-label-sm font-label-sm">تكييف متطور</span>
+</div>
+</div>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center gap-2 text-body-md font-body-md text-on-surface-variant/80">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+                                نظام صوتي وترفيهي
+                            </li>
+<li class="flex items-center gap-2 text-body-md font-body-md text-on-surface-variant/80">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+                                ثلاجة مياه ومشروبات
+                            </li>
+<li class="flex items-center gap-2 text-body-md font-body-md text-on-surface-variant/80">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+                                مساحة واسعة للأمتعة
+                            </li>
+</ul>
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-label-sm text-label-sm font-bold gold-gradient-hover transition-all duration-300 shadow-md">احجز مقعدك</button>
+</div>
+</div>
+<!-- Bus Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-xl overflow-hidden card-shadow group transition-all duration-500 hover:-translate-y-2">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A luxurious navy blue coach bus specifically designed for long-distance pilgrimage travel. The shot is a low-angle profile view on a sun-drenched highway, capturing the reflection of the clear blue sky. The environment is calm and serene. The aesthetic focuses on elegance, reliability, and modern Islamic travel values." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUHbOdyo-G3rRtjDPS1IRo70vp3E3QaOjzMucdF2AscVdCP9TqIrBF5_k4dNPWf4cgzsS4kgaYoxNISbYnX1gZk65cQXjl61Z7t0V1vE3DPjajOlF49n0oZu8G15P1XMlN_x05KJTyoG25ZmwKVmeLESybYwrFzOmbWkoOuxc8MetIqZmJUaY9II7pLbDpZD7o5PZ6wRHEiMQosNovUIiTrQco5AliDNN8R-4rExcdLKXoIojaDzvLEyy-TIyjzPyEdgvt0np5SQnb">
+<div class="absolute top-4 left-4 bg-primary/90 text-on-primary text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-widest backdrop-blur-sm">VIP ROYAL</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md text-primary">مان رويال كلاس</h3>
+<span class="text-secondary font-bold font-body-md">2024</span>
+</div>
+<div class="flex items-center gap-4 mb-6 text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">airline_seat_recline_extra</span>
+<span class="text-label-sm font-label-sm">24 مقعد</span>
+</div>
+<div class="w-px h-4 bg-outline-variant"></div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">ac_unit</span>
+<span class="text-label-sm font-label-sm">تحكم فردي</span>
+</div>
+</div>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center gap-2 text-body-md font-body-md text-on-surface-variant/80">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+                                شاشات ترفيه فردية
+                            </li>
+<li class="flex items-center gap-2 text-body-md font-body-md text-on-surface-variant/80">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+                                مقاعد جلدية فاخرة
+                            </li>
+<li class="flex items-center gap-2 text-body-md font-body-md text-on-surface-variant/80">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+                                طاقم ضيافة متميز
+                            </li>
+</ul>
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-label-sm text-label-sm font-bold gold-gradient-hover transition-all duration-300 shadow-md">احجز مقعدك</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Highlight Section (Asymmetric Bento) -->
+<section class="max-w-container-max mx-auto px-margin-desktop mt-32">
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-gutter h-auto md:h-[600px]">
+<div class="md:col-span-2 md:row-span-2 bg-primary-container text-on-primary p-12 rounded-2xl flex flex-col justify-end relative overflow-hidden">
+<div class="absolute top-0 right-0 w-full h-full opacity-10 islamic-pattern"></div>
+<h3 class="font-display-lg text-display-lg mb-4">راحتكم هي أمانتنا</h3>
+<p class="font-body-lg text-body-lg mb-8 opacity-90">نلتزم بأعلى معايير السلامة والنظافة في كافة رحلاتنا، مع طاقم عمل مدرب لخدمة ضيوف الرحمن على مدار الساعة.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary text-4xl">verified_user</span>
+<span class="material-symbols-outlined text-secondary text-4xl">health_and_safety</span>
+<span class="material-symbols-outlined text-secondary text-4xl">support_agent</span>
+</div>
+</div>
+<div class="md:col-span-2 bg-white border border-outline-variant/30 p-8 rounded-2xl flex items-center gap-6">
+<div class="bg-secondary/10 p-4 rounded-full">
+<span class="material-symbols-outlined text-secondary text-3xl">pin_drop</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-primary">تتبع مباشر</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">خدمة تتبع الحافلات مباشرة من خلال تطبيقنا لضمان دقة المواعيد.</p>
+</div>
+</div>
+<div class="md:col-span-1 bg-secondary-container p-8 rounded-2xl">
+<h4 class="font-headline-md text-headline-md text-on-secondary-container">24/7</h4>
+<p class="font-label-sm text-label-sm text-on-secondary-container mt-2">دعم فني مستمر</p>
+</div>
+<div class="md:col-span-1 bg-surface-container text-primary p-8 rounded-2xl flex flex-col justify-center text-center">
+<span class="material-symbols-outlined text-4xl mb-2">hotel_class</span>
+<p class="font-label-sm text-label-sm font-bold uppercase tracking-wider">تقييم ممتاز</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-16 pb-8 bg-primary text-on-primary border-t border-secondary/20">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<img alt="Logo" class="h-10 w-auto brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6YuY8_HBvB-vz1vGToLr0fD33rhYLSbYdcmQaK83TePe8liJhBoLHul5udqwCyBnmdW9rC7JCusBCztHcZEjaQiYNu5c0jq6GXxXUbPnMMi8iDQ0DzRQ0bEWmTbwzkKEJbTlzl7s19Mv9LyOprC-9jpUbNs50pdV6WqtPkeQriZnaiDCNuIuVeGoEgqayXfAhgppZ6W4A5Q638NVNHOfOBAm8lozZY1apF5c38AHK7Lf6gmwzMVonqppS6Vuy5Ajwd8myB_NNlZ6A">
+<span class="font-headline-md text-headline-md text-on-primary">قافلة المؤمنين</span>
+</div>
+<p class="font-body-md text-body-md text-on-primary/80">نسعى لتقديم تجربة عمرة فريدة تجمع بين الروحانية والراحة العصرية.</p>
+</div>
+<div class="col-span-1">
+<h5 class="font-headline-md text-headline-md text-secondary-container mb-6">روابط سريعة</h5>
+<ul class="space-y-3">
+<li class=""><a class="font-label-sm text-label-sm text-on-primary/80 hover:text-secondary-container transition-colors" href="#">الرئيسية</a></li>
+<li class=""><a class="font-label-sm text-label-sm text-secondary-container font-bold" href="#">أسطول الباصات</a></li>
+<li class=""><a class="font-label-sm text-label-sm text-on-primary/80 hover:text-secondary-container transition-colors" href="#">باقات الفنادق</a></li>
+<li class=""><a class="font-label-sm text-label-sm text-on-primary/80 hover:text-secondary-container transition-colors" href="#">اتصل بنا</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h5 class="font-headline-md text-headline-md text-secondary-container mb-6">معلومات التواصل</h5>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 font-label-sm text-label-sm text-on-primary/80">
+<span class="material-symbols-outlined text-sm">phone</span>
+                        +966 800 123 4567
+                    </li>
+<li class="flex items-center gap-3 font-label-sm text-label-sm text-on-primary/80">
+<span class="material-symbols-outlined text-sm">mail</span>
+                        info@qafilat.com
+                    </li>
+<li class="flex items-center gap-3 font-label-sm text-label-sm text-on-primary/80">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                        مكة المكرمة، المملكة العربية السعودية
+                    </li>
+</ul>
+</div>
+<div class="col-span-1">
+<h5 class="font-headline-md text-headline-md text-secondary-container mb-6">النشرة البريدية</h5>
+<div class="flex gap-2">
+<input class="bg-primary-container border border-outline/30 rounded-lg px-4 py-2 text-on-primary text-label-sm w-full focus:ring-2 focus:ring-secondary outline-none" placeholder="بريدك الإلكتروني" type="email">
+<button class="bg-secondary-container text-on-secondary-container px-4 py-2 rounded-lg font-bold transition-all hover:scale-105 active:scale-95">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-on-primary/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-sm text-label-sm text-on-primary/60">© 2024 قافلة المؤمنين. جميع الحقوق محفوظة.</p>
+<div class="flex gap-6">
+<a class="text-on-primary/60 hover:text-secondary-container transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-primary/60 hover:text-secondary-container transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-primary/60 hover:text-secondary-container transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', function() {
+                this.style.transform = 'scale(0.96)';
+            });
+            button.addEventListener('mouseup', function() {
+                this.style.transform = 'scale(1)';
+            });
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // Simple scroll reveal effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+
+
+</body></html>

@@ -1,36 +1,6 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18331958216"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18331958216');
-</script>
-
-  <!-- Event snippet for انقر للاتصال conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-18331958216/uEqfCLHd9tYcEMj3raVE',
-      'value': 1.0,
-      'currency': 'EGP',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
-
-  
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>قافلة المؤمنين | رحلات العمرة الفاخرة من الرياض</title>
@@ -772,6 +742,10 @@ tailwind.config = {
   </div>
   <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-8 flex flex-col md:flex-row justify-between items-center text-on-primary/60 font-label-sm text-label-sm">
     <p>© 2026 قافلة المؤمنين. جميع الحقوق محفوظة.</p>
+    <div class="flex gap-4 mt-4 md:mt-0">
+      <a href="privacy.html" class="hover:text-secondary-container transition-colors">سياسة الخصوصية</a>
+      <a href="terms.html" class="hover:text-secondary-container transition-colors">الشروط والأحكام</a>
+    </div>
   </div>
 </footer>
 
